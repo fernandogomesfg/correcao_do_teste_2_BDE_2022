@@ -5,8 +5,8 @@
 empresa. Para os funcionários, a empresa possui os seguintes dados: código do cliente, nome do cliente, género, data de
 nascimento, morada; A empresa tem funcionários exercendo os seguintes cargos: Director, chefe do departamento, secretária, contabilista,
 financeiro, e técnico de informática.</p>
-<p>a)Crie uma base de dados que permita registar estes dados, respeitando o conceito de normalização de base
-de dados, de modo a garantir a sua integridade</p>
+
+### a)Crie uma base de dados que permita registar estes dados, respeitando o conceito de normalização de base de dados, de modo a garantir a sua integridade
 
 
 ```
@@ -38,7 +38,7 @@ INSERT into cargo VALUES
   (6, 'Tecnico de Informatica');
 ```
 
-<p>b)Registe pelo menos 10 funcionários da empresa, com os diversos cargos</p>
+### b)Registe pelo menos 10 funcionários da empresa, com os diversos cargos</p>
 
 ```
 insert into funcionario VALUES
@@ -55,7 +55,21 @@ insert into funcionario VALUES
           
 ```
 
-### 1.1. Associe a morada de cada um dos funcionários à uma localização geográfica (bairro)
+## 1.1. Associe a morada de cada um dos funcionários à uma localização geográfica (bairro)
+### a) 3 funcionários são residentes do bairro Matola Gare; 2 são do Bairro Triunfo; 1 do bairro Polana Cimento; 2 do Bairro 3. De Fevereiro; e 1 do bairro Luís Cabral.
+Essa associação foi feita na inserção dos funcionários
+
+### b) Cada bairro pertence à um determinado distrito (Associe cada bairro à um distrito)
+`update bairros set cod_distrito = '11' where id =1`  Matola Gare
+
+`update bairros set cod_distrito = '13' where id =6` Bairro Triunfo
+
+`update bairros set cod_distrito = '13' where id =12` Bairro 3 de Fevereiro
+
+`update bairros set cod_distrito = '13' where id =16` Luis Cabral
+
+`update bairros set cod_distrito = '13' where id =21` Polana Cimento B
+
 
 ##
 ## Número 2: Consultas
